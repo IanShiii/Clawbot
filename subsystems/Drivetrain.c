@@ -28,7 +28,7 @@ void driveBackwardsDistance(int feet) {
 
 void turnDegreesRight(int degrees) {
 	zeroDriveEncoders();
-	double circumference = drivetrainWidth * 3.1415;
+	float circumference = drivetrainWidth * 3.1415;
 	int encoderDistanceToTravel = inchesToEncoderUnits * circumference * degrees / 360;
 	while (SensorValue[leftEncoder] < encoderDistanceToTravel && SensorValue[rightEncoder] > -encoderDistanceToTravel) {
 		drive(80, -80);
@@ -38,7 +38,7 @@ void turnDegreesRight(int degrees) {
 
 void turnDegreesRight(int degrees) {
 	zeroDriveEncoders();
-	double circumference = drivetrainWidth * 3.1415;
+	float circumference = drivetrainWidth * 3.1415;
 	int encoderDistanceToTravel = inchesToEncoderUnits * circumference * degrees / 360;
 	while (SensorValue[leftEncoder] > -encoderDistanceToTravel && SensorValue[rightEncoder] < encoderDistanceToTravel) {
 		drive(-80, 80);
