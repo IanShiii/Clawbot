@@ -8,7 +8,7 @@ int lineFollowerThreshhold = 300; // line follower detects values under this (br
 
 // arm
 float armControllerSensitivity = 0.5; // higher values means setpoint will change faster
-int maxArmAngle = 1200;
+int maxArmAngle = 1175;
 int minArmAngle = 10;
 int armHoldStrength = 15;
 int maxArmError = 40;
