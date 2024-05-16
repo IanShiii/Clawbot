@@ -34,18 +34,12 @@ void pre_auton() {
 }
 
 task autonomous() {
+	wait1Msec(10000);
 	startTask(armFollowSetpoint);
 	setArmSetpoint(maxArmAngle);
-	driveForwardDistance(5);
+	driveForwardDistance(4.95);
 	wait1Msec(1000);
 	setArmSetpoint(200);
-	wait1Msec(500);
-	driveBackwardsDistance(1);
-	wait1Msec(1000);
-	setArmSetpoint(50);
-	turnDegreesRight(90); // change this based on alliance
-	wait1Msec(1000);
-	driveForwardDistance(3);
 	while (true) {
 		abortTimeslice();
 	}
