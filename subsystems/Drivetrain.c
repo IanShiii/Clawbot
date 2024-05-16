@@ -36,7 +36,7 @@ void turnDegreesRight(int degrees) {
 	drive(0,0);
 }
 
-void turnDegreesRight(int degrees) {
+void turnDegreesLeft(int degrees) {
 	zeroDriveEncoders();
 	float circumference = drivetrainWidth * 3.1415;
 	int encoderDistanceToTravel = inchesToEncoderUnits * circumference * degrees / 360;
