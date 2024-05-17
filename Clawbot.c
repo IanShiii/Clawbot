@@ -11,14 +11,16 @@
 
 #include <constants/Settings.c>
 
-#include <util/Util.c>
 #include <util/Manager.c>
+#include <util/Util.c>
 
 #include <subsystems/Drivetrain.c>
 #include <subsystems/Arm.c>
+#include <subsystems/Claw.c>
 
-#include <tasks/DrivetrainTasks.c>
 #include <tasks/ArmTasks.c>
+#include <tasks/DrivetrainTasks.c>
+#include <tasks/ClawTasks.c>
 
 //+++++++++++++++++++++++++++++++++++++++++++++| MAIN |+++++++++++++++++++++++++++++++++++++++++++++++
 task main () {
