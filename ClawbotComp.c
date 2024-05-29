@@ -45,7 +45,7 @@ task autonomous() {
 task usercontrol() {
 	startTask(driveWithController);
 	startTask(moveArmWithController);
-	//startTask(moveClawWithController);
+	startTask(moveClawWithController);
 	while (true) {
 		abortTimeslice();
 	}
