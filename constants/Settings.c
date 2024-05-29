@@ -6,7 +6,6 @@ int feetToEncoderUnits = 344;
 int inchesToEncoderUnits = 28.7
 
 // arm
-float armControllerSensitivity = 0.5; // higher values means setpoint will change faster
 int maxArmAngle = 1175;
 int minArmAngle = 10;
 int armHoldStrength = 15;
