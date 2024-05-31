@@ -21,7 +21,9 @@
 #include <subsystems/Arm.c>
 
 #include <tasks/ArmTasks.c>
-#include <tasks/DrivetrainTasks.c>
+#include <tasks/DrivetrainTasks.c>\
+
+#include <autons/Autons.c>
 
 void pre_auton() {
   bStopTasksBetweenModes = true;
@@ -29,7 +31,7 @@ void pre_auton() {
 
 task autonomous() {
 	wait1Msec(10000);
-	startTask(ScoreDriveBack);
+	startTask(scoreDriveBack);
 	while (true) {
 		abortTimeslice();
 	}
