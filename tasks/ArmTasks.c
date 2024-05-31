@@ -30,7 +30,7 @@ task moveArmWithController() {
 		if (vexRT[Btn8U] == 1) {
 			motor[armMotor] = 127;
 		}
-		else if(vexRT[Btn5U] == 1) {
+		else if(vexRT[Btn5U] == 1 || vexRT[Btn6U] == 1) {
 			if (SensorValue[potentiometer] < maxArmAngle) {
 				motor[armMotor] = 127;
 			}
@@ -38,11 +38,11 @@ task moveArmWithController() {
 				motor[armMotor] = 0;
 			}
 		}
-		else if(vexRT[Btn5D] == 1) {
+		else if(vexRT[Btn5D] == 1 || vexRT[Btn6D] == 1) {
 			motor[armMotor] = -127;
 		}
 		else {
-			if (SensorValue[potentiometer] < maxArmAngle + 20) {
+			if (SensorValue[potentiometer] < maxArmAngle + 250) {
 				motor[armMotor] = armHoldStrength * cosDegrees(SensorValue[potentiometer] / 4095 * 360 - 45);
 			}
 			else {
