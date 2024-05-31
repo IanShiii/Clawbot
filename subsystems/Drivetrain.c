@@ -12,7 +12,15 @@ void driveForwardDistance(int feet) {
 	zeroDriveEncoders();
 	int encoderDistanceToTravel = feet * feetToEncoderUnits;
 	while (SensorValue[leftEncoder] < encoderDistanceToTravel && SensorValue[rightEncoder] < encoderDistanceToTravel) {
-		drive(63, 63);
+		if (SensorValue[leftEncoder] - SensorValue[rightEncoder] > 100) {
+			drive(63, 80);
+		}
+		else if (SensorValue[rightEncoder] - SensorValue[leftEncoder] > 100) {
+			drive(80, 63);
+		}
+		else {
+			drive(63, 63);
+		}
 	}
 	drive(0,0);
 }
@@ -21,7 +29,15 @@ void driveBackwardsDistance(int feet) {
 	zeroDriveEncoders();
 	int encoderDistanceToTravel = feet * feetToEncoderUnits;
 	while (SensorValue[leftEncoder] > -encoderDistanceToTravel && SensorValue[rightEncoder] > -encoderDistanceToTravel) {
-		drive(-63, -63);
+		if (SensorValue[leftEncoder] - SensorValue[rightEncoder] < -100) {
+			drive(-63, -80);
+		}
+		else if (SensorValue[rightEncoder] - SensorValue[leftEncoder] < -100) {
+			drive(-80, -63);
+		}
+		else {
+			drive(-63, -63);
+		}
 	}
 	drive(0,0);
 }
