@@ -36,9 +36,6 @@ task autonomous() {
 	setArmSetpoint(200);
 	wait1Msec(1750);
     driveBackwardsDistance(1.5);
-    while(true) {
-        abortTimeslice();
-    }
 	while (true) {
 		abortTimeslice();
 	}
