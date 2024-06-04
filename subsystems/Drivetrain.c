@@ -24,7 +24,7 @@ void driveForwardDistance(int feet) {
 		}
 
 		// saftey for if wheel gets stuck or something
-		if (time1[T1] > 9000) {
+		if (time1[T1] > feet * 1000 * 1.5) {
 			break;
 		}
 	}

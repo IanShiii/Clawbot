@@ -31,7 +31,16 @@ void pre_auton() {
 
 task autonomous() {
 	wait1Msec(10000);
-	startTask(scoreDriveBack);
+	startTask(armFollowSetpoint);
+	setArmSetpoint(maxArmAngle);
+	driveForwardDistance(5);
+	wait1Msec(1000);
+	setArmSetpoint(200);
+	wait1Msec(1750);
+    driveBackwardsDistance(1.5);
+    while(true) {
+        abortTimeslice();
+    }
 	while (true) {
 		abortTimeslice();
 	}
