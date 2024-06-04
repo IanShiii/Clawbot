@@ -23,8 +23,6 @@
 #include <tasks/ArmTasks.c>
 #include <tasks/DrivetrainTasks.c>
 
-#include <autons/Autons.c>
-
 void pre_auton() {
   bStopTasksBetweenModes = true;
 }
